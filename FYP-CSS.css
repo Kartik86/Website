@@ -1,0 +1,53 @@
+/*background colour each webpage's body*/
+body{
+  background-color: #b9fdfd;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:10%;
+  height: 10%;
+}
+
+h1{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+h1.creative-text{
+  font-size: 28px;
+}
+#wrd-fun{
+  color: #ff0000;
+}
+
+#wrd-interactive{
+  color: #18f400;
+}
+
+#wrd-learning{
+  color: #0148ff;
+}
+
+/* border around login-form */
+.login-container {
+ margin: auto;
+  margin-top: -400px;
+  margin-left: 200px;
+ width: 300px;
+ padding: 20px;
+ background-color: #F5F5F5;
+ border-style: groove;
+ border-radius: 5px;
+
+}
+
+.home-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:auto;
+  height: 10%;
+}
