@@ -11,15 +11,15 @@ session_start();
   <!--Header for the webisites landing page with title inside it-->
   <div class="header">
   <img src="logo.png" alt="11+logo" class="center">
-
+</div>
    <h1 class="creative-text"><span id="wrd-fun">FUN .</span>
      <span  id="wrd-interactive">INTERACTIVE .</span>
       <span id="wrd-learning">LEARNING </span>
     </h1>
-</div>
+
 
 <!--Login form inside a container with it's fields and buttons -->
-<form action="login.php" method="post">
+<form action="index.php" method="post">
   <!--token created to send field values to validate the request for each form-->
   <div class="login-container">
     <h2>Login</h2>
@@ -36,6 +36,35 @@ session_start();
     </button>
   </div>
 </form>
+
+<!-- php code to process login credentials -->
+<?php
+require_once('dbConnector.php');
+if(isset($_POST['loginbtn']))
+{
+  $login_username = mysqli_real_escape_string($con,$_POST['login_username']);
+  $login_password = mysqli_real_escape_string($con,$_POST['login_password']);
+
+  if($login_username != "" && $login_password != ""){
+    $login_password = md5($login_password); //hashes password
+    //checking values match with database data
+    $login_sql = " select count(*) as allNewUsers from Login_credentials where username='".$login_username."' and password='".$login_password."'";
+    $login_result = mysqli_query($con,$login_sql);
+    $row = mysqli_fetch_array($login_result);
+    $count = $row['allNewUsers'];
+
+    //if data exist then re-direct to registered user page
+    if($count > 0){
+      $_SESSION['username'] = $login_username;
+      header('Location: regUsers.php');
+    }
+
+    else {  //wrong login credentials show error message.
+      echo '<script>alert("Incorrect login credentials, please try again.")</script>';
+    }
+  }
+}
+?>
 
 <!--Sign up pop modal container with its fields and buttons -->
 <div class="signupmodal_container" id="modal">
@@ -72,16 +101,65 @@ session_start();
       </div>
     </div>
   </form>
+<!--
+  <div class="controls">
+    <button id="start-btn" class="start-btn btn">Start</button>
+    <button id="next-btn" class="next-btn btn hide">Next</button>
+  </div>
+
+<script>
+const startButton = document.getElementById('start-btn')
+const startText = document.getElementById('taster_text')
+const nextButton = document.getElementById('next-btn')
+const questionContainerElement = document.getElementById('question-container')
+const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
+let shuffledQuestions, currentQuestionIndex
+
+startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++
+  setNextQuestion()
+})
+
+function startGame() {
+  startButton.classList.add('hide')
+  startText.classList.add('hide')
+  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  currentQuestionIndex = 0
+  questionContainerElement.classList.remove('hide')
+  setNextQuestion()
+}
+-->
 
   <div class="home-image">
   <img src="home-image.png" alt="11+logo" class="home-image" width="1000" height="500">
 </div>
 
+<div class="outer-container">
+<button class="quiz_btn" class="start-btn">Start</button>
+</div>
+<script type="text/javascript">
+  const startButton = document.getElementById('start-btn')
+  const container = document.getElementById('outer-container')
+  startButton.addEventListener('click', hide)
+  container.addEventListener('click', hide)
+
+  function hide() {
+    startButton.classList.add('hide')
+    container.classList.add('hide')
+  }
+</script>
+
+
+
+
+
+
 
 
 <div class="quiz-container">
   <div id="quiz"></div>
-
 <button class="quiz_btn" id="previous">Previous Question</button>
 <button class="quiz_btn" id="next">Next Question</button>
 <button class="quiz_btn" id="submit">Submit Quiz</button>
