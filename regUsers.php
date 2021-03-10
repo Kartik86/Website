@@ -5,37 +5,41 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head><link rel="stylesheet" href="FYP-CSS.css"></head> <!--access to CSS style sheet-->
-<title>Home page</title>
+<title>Registered users page</title>
 <body>
 
-  <!--Header for the webisites landing page with title inside it-->
+  <!--Header for the websites landing page with title inside it-->
   <div class="header">
   <img src="logo.png" alt="11+logo" class="left-img">
 </div>
 
-  <div class="english-container">
+  <button class="english-btn">
+    <img src="english_logo.png" alt="english" class="topic">
     <h3 id="english">
       English
     </h3>
-  </div>
+  </button>
 
-  <div class="maths-container">
+  <button class="maths-btn">
+    <img src="maths_logo.png" alt="maths" class="topic">
     <h3 id="maths">
       Maths
     </h3>
-  </div>
+  </button>
 
-  <div class="vr-container">
+  <button class="vr-btn">
+    <img src="VR_logo.png" alt="vr" class="topic">
     <h3 id="vr">
       Verbal Reasoning
     </h3>
-  </div>
+  </button>
 
-  <div class="non_VR-container">
+  <button class="non_VR-btn">
+      <img src="non-VR_logo.png" alt="non-vr" class="topic">
     <h3 id="non-vr">
       Non-Verbal Reasoning
     </h3>
-  </div>
+  </button>
 
 
 
