@@ -12,6 +12,14 @@ session_start();
   <div class="header">
   <img src="logo.png" alt="11+logo" class="center">
 </div>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
    <h1 class="creative-text"><span id="wrd-fun">FUN .</span>
      <span  id="wrd-interactive">INTERACTIVE .</span>
       <span id="wrd-learning">LEARNING </span>
@@ -313,5 +321,12 @@ if(isset($_POST['loginbtn']))
 
 </script>
 
+<div class="description_text">
+  <p>11 plus web learning is a fun and interactive educational web portal designed for students seeking to undertake their 11+ examination by boosting their revision capabilities in an interactive way.
+While built specifically for 11+ age group students who look to join grammar schools, it could be used by other students as a form of exercise to challenge their logical abilities.
+This learning portal accompanies multiple aspects of 11 plus examination subjects including: Maths, English, Verbal and Non-verbal reasoning. The web portal aims to test user's knowledge via various testing methods ranging from multiple choice questions to real life practise papers!
+So, what's the delay for?
+Scroll up and sign up today!</p>
+</div>
 </body>
 </html>

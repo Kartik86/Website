@@ -1,14 +1,45 @@
 /*background colour each webpage's body*/
 body{
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
+/*header on each page*/
 .header{
-  width: auto;
+  width: 100%;
   height: auto;
-  background-color: #00FA9A;
-  border-radius: 20px;
+  background-color: #00FFFF;
+  margin: 0%;
+  margin-top: 0%;
 }
+
+
+.topnav {
+ overflow: hidden;
+ background-color: #333;
+}
+
+.topnav a {
+ float: left;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+.topnav a:hover {
+ background-color: #ffffff;
+ color: black;
+}
+
+.description_text{
+  border-style: groove;
+  border-color: #000000;
+  margin-top: 500px;
+  border-width: medium;
+}
+
+/*the logo image's dimensions*/
 img{
   display: block;
   margin-left: auto;
@@ -21,11 +52,14 @@ img.left-img{
   margin-left: 10px;
 }
 
+/*3 word creative writing text on main home page*/
 h1.creative-text{
   font-size: 28px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
+
+/*Each specific words colours*/
 #wrd-fun{
   color: #ff0000;
 }
@@ -45,11 +79,12 @@ h1.creative-text{
   margin-left: 200px;
  width: 300px;
  padding: 20px;
- background-color: #F5F5F5;
+ background-color: #00BFFF;
  border-style: groove;
  border-radius: 5px;
 }
 
+/*Homepage image banner sized image*/
 .home-image{
   width:100%;
   height: auto;
@@ -124,11 +159,13 @@ h1.creative-text{
   text-align: left;
   display: inline-block;
 }
+
 .answers label{
   display: block;
   margin-bottom: 10px;
 }
 
+/* buttons for the trial questions*/
 #next{
   margin-left: 150px;
 }
@@ -141,14 +178,13 @@ h1.creative-text{
   margin-left: 350px;
 }
 
-
+/*Starting the quiz button*/
 .quiz_btn{
   margin: 0;
    position: absolute;
    top: 90%;
    -ms-transform: translateY(-50%);
    transform: translateY(-50%);
-
 }
 
 .slide{
@@ -165,6 +201,7 @@ h1.creative-text{
   z-index: 2;
 }
 
+/*Container storing the trial questions*/
 .quiz-container{
   position: relative;
   height: 250px;
@@ -173,9 +210,9 @@ h1.creative-text{
   margin-left: 600px;
   width: 500px;
   border: 2px solid #111 ;
-
 }
 
+/*Initial quiz container with text to whether try questions before signing up*/
 .outer-container{
   position: relative;
   height: 250px;
@@ -186,6 +223,7 @@ h1.creative-text{
   border-color: #000000;
 }
 
+/*Buttons for respective chapter topics when user is signed in*/
 .english-btn{
   margin: auto;
   margin-left: 150px;
@@ -198,7 +236,7 @@ h1.creative-text{
 
 .maths-btn{
   margin: auto;
-  margin-left: 80px;
+  margin-left: 120px;
   margin-top: 200px;
   width: 200px;
   height: 150px;
@@ -226,6 +264,7 @@ h1.creative-text{
   background-color: #AFEEEE;
 }
 
+/*size images inside each button to represent topic/ sub topic*/
 .topic{
      display: inline-block;
      float:center;
@@ -233,6 +272,9 @@ h1.creative-text{
      height:55%
 }
 
+/*Sub topic buttons for each topic*/
+/*1 meaning they are the buttons on the first line*/
+/*2 meaning they are the buttons on the second line*/
 .english1-btn{
   margin: auto;
   margin-left: 150px;
