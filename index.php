@@ -7,7 +7,6 @@ session_start();
 <head><link rel="stylesheet" href="FYP-CSS.css"></head> <!--access to CSS style sheet-->
 <title>Home page</title>
 <body>
-
   <!--Header for the webisites landing page with title inside it-->
   <div class="header">
   <img src="logo.png" alt="11+logo" class="center">
@@ -19,13 +18,15 @@ session_start();
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
 </div>
-
    <h1 class="creative-text"><span id="wrd-fun">FUN .</span>
      <span  id="wrd-interactive">INTERACTIVE .</span>
       <span id="wrd-learning">LEARNING </span>
     </h1>
 
 
+
+    <div class="cork-img">
+    <img src="cork-img.jpg" class="cork-img">
 <!--Login form inside a container with it's fields and buttons -->
 <form action="index.php" method="post">
   <!--token created to send field values to validate the request for each form-->
@@ -44,6 +45,9 @@ session_start();
     </button>
   </div>
 </form>
+    </div>
+
+
 
 <!-- php code to process login credentials -->
 <?php
@@ -112,70 +116,32 @@ if(isset($_POST['loginbtn']))
 
 <!-- Banner image on home page-->
   <div class="home-image">
-  <img src="home-image.png" alt="11+logo" class="home-image" width="1000" height="500">
+  <img src="home-image.png" alt="11+logo" class="home-image">
 </div>
-
-
-<!-- overlay container text and button to
-<div class="outer-container">
-<button id="quiz_btn">Start</button>
-</div>
-<script type="text/javascript">
-    var button = document.getElementById('quiz_btn')
-    button.addEventListener('click',hideshow,false);
-
-    function hideshow() {
-        document.getElementById('hidden-div').style.display = 'block';
-        this.style.display = 'none'
-    }
-</script>
--->
-<!--
-<script type="text/javascript">
-    var button = document.getElementById('quiz_btn')
-    button.addEventListener('click',hideshow,false);
-
-    function hideshow() {
-        document.getElementById('hidden-div').style.display = 'block';
-        this.style.display = 'none'
-    }
-</script>
-
-<script type="text/javascript">
-  const startButton = document.getElementById('start-btn')
-  const container = document.getElementById('outer-container')
-  startButton.addEventListener('click', hide)
-  container.addEventListener('click', hide)
-
-  function hide() {
-    startButton.classList.add('hide')
-    container.classList.add('hide')
-  }
-</script>
--->
-
-<div class="quiz-container">
+<!-- Container for trial quiz before users sign in-->
+<div class="quiz-box">
   <div id="quiz"></div>
-<button class="quiz_btn" id="previous">Previous Question</button>
-<button class="quiz_btn" id="next">Next Question</button>
-<button class="quiz_btn" id="submit">Submit Quiz</button>
-<div class="quiz_btn" id="results"></div>
+  <button class="quiz_btn" id="previous">Previous Question</button>
+  <button class="quiz_btn" id="next">Next Question</button>
+  <button class="quiz_btn" id="submit">Submit Quiz</button>
+  <input  type="button" class="quiz_btn" id="start" value="Try now!">
+  <div class="quiz_btn" id="results"></div>
 </div>
-<script>
 
+<!-- JS function to process the test, display test, process results-->
+<script>
 (function(){
   // Functions
   function buildQuiz(){
     // variable to store the HTML output
     const output = [];
-
+      output.push('<p class="slide">Unsure whether this web tool is ideal for your child?<br> Then why not observe your child try some practise questions. press the button below!</p>')
     // for each question...
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
 
         // variable to store the list of possible answers
         const answers = [];
-
         // and for each available answer...
         for(letter in currentQuestion.answers){
 
@@ -243,18 +209,27 @@ if(isset($_POST['loginbtn']))
     slides[n].classList.add('active-slide');
     currentSlide = n;
     if(currentSlide === 0){
-      previousButton.style.display = 'none';
-    }
-    else{
-      previousButton.style.display = 'inline-block';
-    }
-    if(currentSlide === slides.length-1){
       nextButton.style.display = 'none';
-      submitButton.style.display = 'inline-block';
+      previousButton.style.display = 'none';
+      submitButton.style.display = 'none';
     }
-    else{
+
+    else if (currentSlide === 1) {
+      nextButton.style.display = 'inline-block';
+      startbtn.style.display = 'none';
+      previousButton.style.display = 'none';
+      submitButton.style.display = 'none';
+    }
+    else if (currentSlide === 2) {
+      previousButton.style.display = 'inline-block';
       nextButton.style.display = 'inline-block';
       submitButton.style.display = 'none';
+    }
+
+    else {
+      previousButton.style.display = 'inline-block';
+      submitButton.style.display = 'inline-block';
+      nextButton.style.display = 'none';
     }
   }
 
@@ -262,17 +237,21 @@ if(isset($_POST['loginbtn']))
     showSlide(currentSlide + 1);
   }
 
+  function startQuiz() {
+    showSlide(currentSlide + 1);
+  }
   function showPreviousSlide() {
     showSlide(currentSlide - 1);
   }
 
   // Variables
+
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
-      question: "40 x [] = 6 x 5 x 8?",
+      question: "Q1. 40 x [] = 6 x 5 x 8?",
       answers: {
         a: "4",
         b: "6",
@@ -281,7 +260,7 @@ if(isset($_POST['loginbtn']))
       correctAnswer: "b"
     },
     {
-      question: "AIRCRAFT is to TRANSPORT as NEWSPAPER is to:",
+      question: "Q2. AIRCRAFT is to TRANSPORT as NEWSPAPER is to:",
       answers: {
         a: "typing",
         b: "publishing",
@@ -291,7 +270,7 @@ if(isset($_POST['loginbtn']))
       correctAnswer: "d"
     },
     {
-      question:"Which of these words is closest in meaning to the word dawdle" ,
+      question:"Q3. Which of these words is closest in meaning to the word dawdle" ,
       answers: {
         a: "push",
         b: "wake",
@@ -307,6 +286,7 @@ if(isset($_POST['loginbtn']))
   // Pagination
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
+  const startbtn = document.getElementById("start")
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
@@ -317,6 +297,7 @@ if(isset($_POST['loginbtn']))
   submitButton.addEventListener('click', showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
+  startbtn.addEventListener("click", startQuiz)
 })();
 
 </script>
@@ -328,5 +309,15 @@ This learning portal accompanies multiple aspects of 11 plus examination subject
 So, what's the delay for?
 Scroll up and sign up today!</p>
 </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
