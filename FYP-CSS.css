@@ -11,8 +11,6 @@ body{
   margin: 0%;
   margin-top: 0%;
 }
-
-
 .topnav {
  overflow: hidden;
  background-color: #333;
@@ -75,14 +73,68 @@ h1.creative-text{
 /* border around login-form */
 .login-container {
  margin: auto;
-  margin-top: -400px;
-  margin-left: 200px;
+ margin-top: -400px;
+ margin-left: 200px;
  width: 300px;
  padding: 20px;
- background-color: #00BFFF;
  border-style: groove;
  border-radius: 5px;
+ border: #B78240 solid 10px;
 }
+
+.cork-board {
+    background: url(cork-board.gif) no-repeat;
+    width: 500px;
+    height: 200px;
+
+}
+
+
+/*
+.note {
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    float: left;
+    margin: 8px;
+    border: 1px solid rgba(0,0,0,.25);
+}
+
+.sticky1 {
+    transform: rotate(-3.5deg);
+    -webkit-transform: rotate(-3.5deg);
+    -moz-transform: rotate(-3.5deg);
+    background-color: #CBFAFA;
+}
+
+div#frame a:nth-child(3n) .pin {
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 50%, black 100%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, black);
+    background-image: radial-gradient(yellow 50%, black 100%);
+}
+*/
+
+/*Container storing the trial questions*/
+.quiz-box{
+  position: relative;
+  height: 300px;
+  background-color: #497959;
+  margin-top: -765px;
+  margin-left: 800px;
+  width: 525px;
+  border: #B78240 solid 10px;
+}
+
+/*Initial quiz container with text to whether try questions before signing up*/
+.slide{
+  text-align: center;
+  font-size: 24px;
+  font-family: chalkduster, fantasy;
+  color: #ffffff;
+}
+
 
 /*Homepage image banner sized image*/
 .home-image{
@@ -165,27 +217,46 @@ h1.creative-text{
   margin-bottom: 10px;
 }
 
-/* buttons for the trial questions*/
-#next{
-  margin-left: 150px;
-}
-
-#submit{
-  margin-left: 150px;
-}
-
-#results{
-  margin-left: 350px;
-}
 
 /*Starting the quiz button*/
 .quiz_btn{
-  margin: 0;
-   position: absolute;
-   top: 90%;
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
+  position: absolute;
+  top: 85%;
+  background-color: #497959;
+  border-color: #ffffff;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 1px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: chalkduster, fantasy;
+  color: #ffffff;
 }
+
+/*individual button properties on trial question*/
+#start{
+  margin-left:200px;
+}
+
+#previous{
+  margin-left:10px;
+}
+
+#next{
+  margin-left:220px;
+}
+
+#results{
+  margin-left:400px;
+}
+
+#submit{
+  margin-left: 220px;
+}
+
 
 .slide{
   position: absolute;
@@ -209,18 +280,7 @@ h1.creative-text{
   margin-top: -750px;
   margin-left: 600px;
   width: 500px;
-  border: 2px solid #111 ;
-}
-
-/*Initial quiz container with text to whether try questions before signing up*/
-.outer-container{
-  position: relative;
-  height: 250px;
-  margin-top: -750px;
-  margin-left: 600px;
-  width: 500px;
-  border: 2px solid #000 ;
-  border-color: #000000;
+  border: 2px solid #111;
 }
 
 /*Buttons for respective chapter topics when user is signed in*/

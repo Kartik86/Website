@@ -10,7 +10,8 @@ session_start();
 
   <!--Header for the websites landing page with title inside it-->
   <div class="header">
-    <img src="logo.png" alt="11+logo" class="left-img">
+  
+    <img href="index.php" src="logo.png" alt="11+logo" class="left-img">
   </div>
 
   <!--English button linking to english page-->
