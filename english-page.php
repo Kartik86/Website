@@ -4,7 +4,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="FYP-CSS.css"></head> <!--access to CSS style sheet-->
+<head><link rel="stylesheet" href="english-CSS.css"></head> <!--access to CSS style sheet-->
 <title>English page</title>
 <body>
 
@@ -13,7 +13,23 @@ session_start();
   <img src="logo.png" alt="11+logo" class="left-img">
 </div>
 
-<button class="english1-btn">
+  <div class="navbar">
+  <a href="/Website/regUsers.php">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Subjects
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/Website/maths-page.php">Maths</a>
+      <a href="/Website/vr-page.php">Verbal reasoning</a>
+      <a href="/Website/non-vr-page.php">Non-verbal reasoning</a>
+    </div>
+  </div>
+</div>
+
+
+
+<button onclick="window.location.href='comprehension/Comprehension.php'" class="english1-btn">
   <img src="english_logo.png" alt="Comprehension 1" class="topic">
   <h3>
     Comprehension 1

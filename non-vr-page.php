@@ -4,7 +4,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="FYP-CSS.css"></head> <!--access to CSS style sheet-->
+<head><link rel="stylesheet" href="non-vr-CSS.css"></head> <!--access to CSS style sheet-->
 <title>Non Verbal reasoning page</title>
 <body>
 
@@ -13,8 +13,21 @@ session_start();
   <img src="logo.png" alt="11+logo" class="left-img">
 </div>
 
+<div class="navbar">
+  <a href="/Website/regUsers.php">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Subjects
+        <i class="fa fa-caret-down"></i>
+      </button>
+        <div class="dropdown-content">
+          <a href="/Website/english-page.php">English</a>
+          <a href="/Website/vr-page.php">Verbal reasoning</a>
+          <a href="/Website/maths-page.php">Maths</a>
+        </div>
+      </div>
+</div>
 
-<button class="non-vr1-btn">
+<button class="non-vr1-btn" onclick="window.location.href='non-VR/non-VR.php'" class="english1-btn">
   <img src="english_logo.png" alt="Analogies" class="topic">
   <h3>
      Analogies

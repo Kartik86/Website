@@ -4,47 +4,53 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="FYP-CSS.css"></head> <!--access to CSS style sheet-->
-<title>Home page</title>
+  <head>
+    <link rel="stylesheet" href="FYP-CSS.css">
+  </head> <!--access to CSS style sheet-->
+  <title>
+    Home page
+  </title>
+
 <body>
   <!--Header for the webisites landing page with title inside it-->
   <div class="header">
   <img src="logo.png" alt="11+logo" class="center">
-</div>
+  </div>
 
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
-   <h1 class="creative-text"><span id="wrd-fun">FUN .</span>
-     <span  id="wrd-interactive">INTERACTIVE .</span>
-      <span id="wrd-learning">LEARNING </span>
-    </h1>
-
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+      <h1 class="creative-text">
+          <span id="wrd-fun">FUN .</span>
+          <span id="wrd-interactive">INTERACTIVE .</span>
+          <span id="wrd-learning">LEARNING </span>
+      </h1>
 
 
     <div class="cork-img">
-    <img src="cork-img.jpg" class="cork-img">
-<!--Login form inside a container with it's fields and buttons -->
-<form action="index.php" method="post">
-  <!--token created to send field values to validate the request for each form-->
-  <div class="login-container">
-    <h2>Login</h2>
-    <label for="login_username"><b>Username:</b></label><br>
-    <input type ="text" name="login_username" maxlength="20" required><br>
+      <img src="cork-img.jpg" class="cork-img">
 
-    <label for="login_password"><b>Password:</b></label><br>
-    <input type="password" name="login_password" maxlength="20" required><br>
+      <!--Login form inside a container with it's fields and buttons -->
+      <form action="index.php" method="post">
+        <!--token created to send field values to validate the request for each form-->
+        <div class="login-container">
+          <h2>Login</h2>
+          <label for="login_username"><b>Username:</b></label><br>
+          <input type ="text" name="login_username" maxlength="20" required><br>
 
-    <input id="login_btn" type="submit" name="loginbtn" value="Login">
-    <p>New member?</p>
-    <button id="login_btn">
-      <a href="#modal">Create Account</a> <!-- pop up modal for sign up form -->
-    </button>
-  </div>
-</form>
+          <label for="login_password"><b>Password:</b></label><br>
+          <input type="password" name="login_password" maxlength="20" required><br>
+
+          <input id="login_btn" type="submit" name="loginbtn" value="Login">
+          <p>New member?</p>
+          <button id="login_btn">
+            <a href="#modal">Create Account</a> <!-- pop up modal for sign up form -->
+          </button>
+        </div>
+      </form>
     </div>
 
 
@@ -309,13 +315,6 @@ This learning portal accompanies multiple aspects of 11 plus examination subject
 So, what's the delay for?
 Scroll up and sign up today!</p>
 </div>
-
-
-
-
-
-
-
 
 
 

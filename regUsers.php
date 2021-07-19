@@ -1,7 +1,10 @@
 <?php
 //access the session data before any session data is created or accessed.
 session_start();
+
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head><link rel="stylesheet" href="FYP-CSS.css"></head> <!--access to CSS style sheet-->
@@ -10,12 +13,89 @@ session_start();
 
   <!--Header for the websites landing page with title inside it-->
   <div class="header">
-  
+
     <img href="index.php" src="logo.png" alt="11+logo" class="left-img">
+
+    <!--convert username character to html entities and greets logged in user-->
+    <h2 class="text">Welcome <?= htmlspecialchars($_SESSION['username'])?>!</h2>
+
+  </div>
+
+<!--Navigation bar-->
+  <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">English
+          <i class="fa fa-caret-down"></i>
+        </button>
+          <div class="dropdown-content">
+            <a href="/Website/Comprehension.php">Comprehension 1</a>
+            <a href="">Spelling</a>
+            <a href="">Punctuation</a>
+            <a href="">Word & Phrases 1</a>
+            <a href="">Complete the sentence</a>
+            <a href="">Word & Phrases 2</a>
+            <a href="">Comprehension 2</a>
+          </div>
+      </div>
+        <div class="dropdown">
+          <button class="dropbtn">Maths
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+              <a href="/Website/BODMAS.php">BODMAS</a>
+              <a href="">Basic operation</a>
+              <a href="">Fraction & Numbers</a>
+              <a href="">Algebra</a>
+              <a href="">Geometry & Measurements</a>
+              <a href="">Miscelleous</a>
+              <a href="">Statistics</a>
+            </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Verbal Reasoning
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+              <a href="/Website/verbal-reasoning1.php">Making Words</a>
+              <a href="">Word Meanings</a>
+              <a href="">Compund Words</a>
+              <a href="">Double Meaning</a>
+              <a href="">Opposite Meaning</a>
+              <a href="">Related Numbers</a>
+            </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Non Verbal Reasoning
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+              <a href="/Website/non-VR.php">Analogies</a>
+              <a href="">Series</a>
+              <a href="">Odd One Out</a>
+              <a href="">Nets</a>
+              <a href="">Series</a>
+              <a href="">Codes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Mock papers
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+              <a href="">English</a>
+              <a href="">Maths</a>
+              <a href=""> Verbal Reasoning </a>
+              <a href="">Non Verbal Reasoning</a>
+            </div>
+        </div>
+        <div class="topnav-right">
+          <a href="index.php">Log out</a>
+        </div>
+
   </div>
 
   <!--English button linking to english page-->
-  <button onclick="window.location.href='english-page.php'" class="english-btn">
+  <button onclick="window.location.href='english-page.php'" class="maths-btn">
     <img src="english_logo.png" alt="english" class="topic">
     <h3 id="english">
       English

@@ -4,7 +4,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="FYP-CSS.css"></head> <!--access to CSS style sheet-->
+<head><link rel="stylesheet" href="vr-CSS.css"></head> <!--access to CSS style sheet-->
 <title>Verbal reasoning page</title>
 <body>
 
@@ -13,14 +13,21 @@ session_start();
   <img src="logo.png" alt="11+logo" class="left-img">
 </div>
 
-<button class="vr1-btn">
-  <img src="english_logo.png" alt="CLogic and coding" class="topic">
-  <h3>
-     Logic and coding
-  </h3>
-</button>
+<div class="navbar">
+  <a href="/Website/regUsers.php">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Subjects
+        <i class="fa fa-caret-down"></i>
+      </button>
+        <div class="dropdown-content">
+          <a href="/Website/english-page.php">English</a>
+          <a href="/Website/maths-page.php">Maths</a>
+          <a href="/Website/non-vr-page.php">Non-verbal reasoning</a>
+        </div>
+      </div>
+</div>
 
-<button class="vr1-btn">
+<button class="vr1-btn" onclick="window.location.href='verbal-reasoning1/verbal-reasoning1.php'" class="english1-btn">
   <img src="english_logo.png" alt="Making words" class="topic">
   <h3>
     Making words
