@@ -14,7 +14,7 @@
 <body>
   <!--Header for the webisites landing page with title inside it-->
   <div class="header">
-    <img href="Website/index.php" src="logo.png" alt="11+logo" class="center" width="10%" height="10%">
+    <img src="logo.png" alt="11+logo" class="center" width="10%" height="10%">
   </div>
 
 
@@ -28,6 +28,8 @@
         <div class="left">
             <div class="question-title"> Comprehension Multiple Choice Test</div>
             <div>
+              <h6> Please read the following passage and attempt all questions shown
+                  below the passage in a scroll bar.</h6>
               <!--Passage for students to read from-->
                 <h4 class="passage">
                     <p>The house was three miles from the station, but, before the dusty hired hack had rattled along
@@ -305,15 +307,21 @@
         </div>
         <div class="right">
             <div class="timer"> Time Left: <span id="time">30:00</span> </div>
-            <div class="total-marks"> Total Marks 20 </div>
+            <div class="total-marks"> Total Marks Available: 20 </div>
         </div>
     </div>
+        <!--Instructions for students to follow-->
     <div id="instruct-modal" class="instruct-modal">
         <div class="instruct-modal-content">
             <span class="instruct-close">&times;</span>
             <h1>Instructions</h1>
             <p><font size="3" color="#e01937"> Please read the following passage and attempt all questions shown
                 below the passage in a scroll bar. There are total 20 questions available in this Comprehension.
+                Attempt all questions shown below in a scroll bar.<br> <br>
+               - You have 30 minutes to answer all questions.<br>
+               - Press the submit once you are satisfied with all your answers.<br>
+               - Explanations to any wrong and right answers will be provided at the end of the test.<br>
+               - It is not compulsary answer all questions if you dont understand it, but it is advised to attempt all questions by making logical choices.
             </font></p>
         </div>
     </div>

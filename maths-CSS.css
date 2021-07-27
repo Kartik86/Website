@@ -21,12 +21,13 @@ img{
   height: 10%;
 }
 
+
 img:hover{
   cursor: pointer;
 }
 
 img.left-img{
-  margin-left: 10px;
+  float: center;
 }
 
 

@@ -31,6 +31,11 @@
     margin: 4px 0px;
 }
 
+h6{
+    text-align: center;
+
+}
+
 .passage {
     border: 1px solid gray;
     word-wrap: break-word;

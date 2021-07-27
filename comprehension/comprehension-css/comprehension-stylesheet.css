@@ -211,3 +211,7 @@ td{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+h6{
+  text-align: center;
+}

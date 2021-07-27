@@ -27,6 +27,10 @@ session_start();
       </div>
 </div>
 
+<br>
+<!--Website credit for marquee: https://sites.google.com/view/how-to-with-new-sites/embeds/embed-with-htmljavascript/scrolling-text-banners-->
+<marquee bgcolor="#800000" font style="bold" direction="left" scrolldelay="100"><font size="5" face="Verdana"><font color="#F8F8FF">The only way to learn mathematics is to learn mathematics!</marquee>
+
 
 <button onclick="window.location.href='BODMAS/BODMAS.php'" class="maths1-btn" class="maths1-btn">
   <img src="english_logo.png" alt="BODMAS" class="topic">

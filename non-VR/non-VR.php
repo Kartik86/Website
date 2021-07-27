@@ -6,7 +6,7 @@
     <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
     <!--source link to j script file for comprehension questions-->
     <script src="non-VR-jscript/non-VR.js"></script>
-    <title>Non Verbal Reasoning Test</title>
+    <title>Analogies Test</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -17,7 +17,7 @@
     <img href="Website/index.php" src="logo.png" alt="11+logo" class="center" width="10%" height="10%">
   </div>
 
-<!--navigation-->
+<!--header-->
   <div class="navbar">
     <a href="/Website/regUsers.php">Home</a>
   </div>
@@ -25,7 +25,8 @@
     <!--Seperate container for all questions-->
     <div class="test-container">
         <div class="left">
-            <div class="question-title"> Non Verbal Reasoning Multiple Choice Test</div>
+            <div class="question-title"> Analogies Multiple Choice Test</div>
+            <h6> Determine the figure which is similar to the question figure.</h6>
 
             <!--Multiple choice questions relating to the passage above-->
             <div class="question-list">
@@ -91,15 +92,20 @@
         </div>
         <div class="right">
             <div class="timer"> Time Left: <span id="time">5:00</span> </div>
-            <div class="total-marks"> Total Marks 5 </div>
+            <div class="total-marks"> Total Marks Available: 5 </div>
         </div>
     </div>
     <div id="instruct-modal" class="instruct-modal">
         <div class="instruct-modal-content">
             <span class="instruct-close">&times;</span>
             <h1>Instructions</h1>
-            <p><font size="3" color="#e01937"> Determine the figure which is similar to the question figure.
-               There are total 5 questions available in this Non Verbal Reasoning test.
+            <p><font size="3" color="#e01937"> Determine the figure which is similar to the question figure.<br><br>
+                  Attempt all questions shown below in a scroll bar.<br>
+                 - There are a total of 5 questions available in this Non-Verbal Reasoning test.<br>
+                 - You have 5 minutes to answer all questions.<br>
+                 - Press the submit once you are satisfied with all your answers.<br>
+                 - Explanations to any wrong and right answers will be provided at the end of the test.<br>
+                 - It is not compulsary answer all questions if you dont understand it, but it is advised to attempt all questions by making logical choices.
             </font></p>
         </div>
     </div>

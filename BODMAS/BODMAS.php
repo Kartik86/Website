@@ -14,7 +14,7 @@
 <body>
   <!--Header for the webisites landing page with title inside it-->
   <div class="header">
-    <img href="Website/index.php" src="logo.png" alt="11+logo" class="center" width="10%" height="10%">
+    <img src="logo.png" alt="11+logo" class="center" width="10%" height="10%">
   </div>
 
 <!--navigation-->
@@ -26,6 +26,7 @@
     <div class="test-container">
         <div class="left">
             <div class="question-title"> BODMAS Multiple Choice Test</div>
+              <h6> Calculate the answers following the BODMAS principles<h6>
 
             <!--Multiple choice questions relating to the passage above-->
             <div class="question-list">
@@ -129,15 +130,20 @@
         </div>
         <div class="right">
             <div class="timer"> Time Left: <span id="time">15:00</span> </div>
-            <div class="total-marks"> Total Marks 10 </div>
+            <div class="total-marks"> Total Marks Available: 10 </div>
         </div>
     </div>
     <div id="instruct-modal" class="instruct-modal">
         <div class="instruct-modal-content">
             <span class="instruct-close">&times;</span>
             <h1>Instructions</h1>
-            <p><font size="3" color="#e01937"> Please read the following passage and attempt all questions shown
-                below the passage in a scroll bar. There are total 10 questions available in this BODMAS test.
+            <p><font size="3" color="#e01937"> Calculate the answers to each question following the principles of BODMAS<br> <br>
+               - You have 15 minutes to answer all questions.<br>
+               - There are a total of 10 questions available in this BODMAS test.<br>
+               - Press the submit once you are satisfied with all your answers.<br>
+               - Explanations to any wrong and right answers will be provided at the end of the test.<br>
+               - It is not compulsary answer all questions if you dont understand it, but it is advised to attempt all questions by making logical choices.
+            </font></p>
             </font></p>
         </div>
     </div>

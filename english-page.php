@@ -26,6 +26,9 @@ session_start();
     </div>
   </div>
 </div>
+<br>
+<!--Website credit for marquee: https://sites.google.com/view/how-to-with-new-sites/embeds/embed-with-htmljavascript/scrolling-text-banners-->
+<marquee bgcolor="#228B22" font style="bold" direction="left" scrolldelay="100"><font size="5" face="Verdana"><font color="#F8F8FF">Time for some english lessons! Practise all your favourite english topics in one place!</marquee>
 
 
 

@@ -32,10 +32,33 @@ body{
 }
 
 .description_text{
+  font-family: 'Kids Handwriting', sans-serif;
+  font-size: 40px;
+  color: #FFFFFF;
+  text-align: center;
   border-style: groove;
-  border-color: #000000;
-  margin-top: 500px;
+  background-color: #4169E1;
+  margin-top: 410px;
   border-width: medium;
+}
+
+.kids-font{
+  font-family: 'Kids Handwriting', sans-serif;
+  font-size: 40px;
+  color: #FFA500;
+}
+
+.font-style{
+  font-family: 'Kids Handwriting', sans-serif;
+  font-size: 27px;
+  color: #4682B4;
+}
+
+#text-style{
+  font-family: 'Kids Handwriting', sans-serif;
+  font-size: 35px;
+  color: #e60000;
+  text-align: center;
 }
 
 /*the logo image's dimensions*/
@@ -45,10 +68,6 @@ img{
   margin-right: auto;
   width:10%;
   height: 10%;
-}
-
-img:hover{
-  cursor: pointer;
 }
 
 img.left-img{
@@ -125,7 +144,7 @@ h1.creative-text{
   position: relative;
   height: 300px;
   background-color: #497959;
-  margin-top: -800px;
+  margin-top: -740px;
   margin-left: 800px;
   width: 525px;
   border: #B78240 solid 10px;
@@ -151,9 +170,10 @@ h1.creative-text{
 
 /*Homepage image banner sized image*/
 .home-image{
-  width:100%;
-  height: auto;
-  margin-top: 150px;
+  width:70%;
+  height: 70%;
+  margin-top: 100px;
+  margin-right: -70px;
 }
 
 
@@ -271,7 +291,7 @@ h1.creative-text{
   margin-left: 220px;
 }
 
-
+/*Slides on trial question*/
 .slide{
   position: absolute;
   left: 0px;
@@ -288,19 +308,18 @@ h1.creative-text{
 
 
 /*Buttons for respective chapter topics when user is signed in*/
-
-.maths-btn{
+.regEnglish-btn{
   margin: auto;
   margin-left: 120px;
   margin-top: 200px;
   width: 200px;
   height: 150px;
   border-radius: 20px;
-  background-color: #FF6347;
-
+  background-color: #90EE90;
+  cursor: pointer;
 }
 
-.math-btn{
+.maths-btn{
   margin: auto;
   margin-left: 120px;
   margin-top: 200px;
@@ -319,6 +338,7 @@ h1.creative-text{
   height: 150px;
   border-radius: 20px;
   background-color: #EE82EE;
+  cursor: pointer;
 }
 
 .non_VR-btn{
@@ -329,6 +349,7 @@ h1.creative-text{
   height: 150px;
   border-radius: 20px;
   background-color: #AFEEEE;
+  cursor: pointer;
 }
 
 /*size images inside each button to represent topic/ sub topic*/
@@ -350,6 +371,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color: #90EE90;
+  cursor: pointer;
 }
 
 .english2-btn{
@@ -360,6 +382,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color: #90EE90;
+  cursor: pointer;
 }
 
 .maths1-btn{
@@ -370,6 +393,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color: #FF6347;
+  cursor: pointer;
 }
 
 .maths2-btn{
@@ -380,6 +404,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color: #FF6347;
+  cursor: pointer;
 }
 
 .vr1-btn{
@@ -390,6 +415,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color:#EE82EE;
+  cursor: pointer;
 }
 
 .vr2-btn{
@@ -400,6 +426,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color: #EE82EE;
+  cursor: pointer;
 }
 
 
@@ -411,6 +438,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color:#AFEEEE;
+  cursor: pointer;
 }
 
 .non-vr2-btn{
@@ -421,6 +449,7 @@ h1.creative-text{
   height: 120px;
   border-radius: 20px;
   background-color: #AFEEEE;
+  cursor: pointer;
 }
 
 /*CSS FOR COMPREHENSION PAGE*/
@@ -430,7 +459,6 @@ h1.creative-text{
 }
 
 /*CSS FOR navigation bar*/
-
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -498,6 +526,49 @@ h1.creative-text{
 }
 
 h2.text{
-
   display: inline;
 }
+
+#slideshow {
+  margin: 50px auto;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* properties for submit button on sign up form*/
+input[name="regbtn"] {
+  width: 30%;
+  background-color:#3CB371;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* properties for reset button on sign up form */
+input[type=reset] {
+  width: 30%;
+  background-color: #e61934;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
