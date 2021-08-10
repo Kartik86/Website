@@ -35,11 +35,11 @@ session_start();
       <!--token created to send field values to validate the request for each form-->
       <div class="login-container">
         <h2 id=text-style>LOGIN</h2>
-        <label for="login_username" class="kids-font"><b>Username:</b></label><br>
-        <input type ="text" name="login_username" maxlength="20" required><br>
+        <label for="login_username" class="kids-font"><b>Username:</b></label>
+        <input type ="text" name="login_username" maxlength="20" required>
 
-        <label for="login_password" class="kids-font"><b>Password:</b></label><br>
-        <input type="password" name="login_password" maxlength="20" required><br>
+        <label for="login_password" class="kids-font"><b>Password:</b></label>
+        <input type="password" name="login_password" maxlength="20" required>
 
         <input id="login_btn" type="submit" name="loginbtn" value="Login">
         <p class="font-style"> New member?</p>

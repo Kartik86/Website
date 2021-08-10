@@ -97,10 +97,10 @@ h1.creative-text{
 /* border around login-form */
 .login-container {
  margin: auto;
- margin-top: -350px;
+ margin-top: -370px;
  margin-left: 200px;
  width: 200px;
- padding: 20px;
+ padding: 10px;
  transform: rotate(-3.5deg);
    -webkit-transform: rotate(-3.5deg);
    -moz-transform: rotate(-3.5deg);

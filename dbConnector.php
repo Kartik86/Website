@@ -1,7 +1,7 @@
 <?php
 
 $dbServer = "localhost";
-$dbName = "FYP-database";
+$dbName = "FYP_database";
 $dbPassword = "";
 $dbUsername = "root";
 
